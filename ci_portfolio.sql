@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2021 at 10:40 AM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.6
+-- Generation Time: Jan 24, 2022 at 08:43 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.0.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `muhamadahmadin_uts`
+-- Database: `ci_portfolio`
 --
 
 -- --------------------------------------------------------
@@ -43,6 +43,27 @@ CREATE TABLE `dokter` (
 INSERT INTO `dokter` (`id`, `kode_dokter`, `nama`, `gender`, `alamat`, `created_at`) VALUES
 (1, 'DOK001', 'Dra. Inggit Marghita', 'P', 'Majalengka', '2021-12-19 15:13:37'),
 (2, 'DOK002', 'Dr. Muh. Ahmadin', 'L', 'Cirebon', '2021-12-19 15:14:12');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `galeri`
+--
+
+CREATE TABLE `galeri` (
+  `id` int(5) UNSIGNED NOT NULL,
+  `filename_original` varchar(255) DEFAULT NULL,
+  `filename_encrypted` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `galeri`
+--
+
+INSERT INTO `galeri` (`id`, `filename_original`, `filename_encrypted`, `created_at`) VALUES
+(1, 'entry stopped.png', '20220113/1642093767_e73dd6bc8a17b0b2f40c.png', '2022-01-14 00:09:27'),
+(2, '3.jpg', '20220123/1643001514_f2ba98576ef28919ecdc.jpg', '2022-01-24 12:18:34');
 
 -- --------------------------------------------------------
 
@@ -156,6 +177,12 @@ ALTER TABLE `dokter`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `galeri`
+--
+ALTER TABLE `galeri`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `kamar`
 --
 ALTER TABLE `kamar`
@@ -188,6 +215,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `dokter`
   MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `galeri`
+--
+ALTER TABLE `galeri`
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `kamar`
