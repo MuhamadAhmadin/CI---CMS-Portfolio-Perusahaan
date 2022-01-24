@@ -110,13 +110,9 @@
             </li>
                 <li class="bold"><a href="<?= base_url('dashboard') ?>" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a>
                 </li>
-                <li class="bold"><a href="<?= base_url('dashboard/kamar') ?>" class="waves-effect waves-cyan"><i class="mdi-maps-store-mall-directory"></i> Kamar</a>
+                <li class="bold"><a href="<?= base_url('dashboard/pasien') ?>" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Pasien</a>
                 </li>
-                <li class="bold"><a href="<?= base_url('dashboard/dokter') ?>" class="waves-effect waves-cyan"><i class="mdi-action-face-unlock"></i> Dokter</a>
-                </li>
-                <li class="bold"><a href="<?= base_url('dashboard/pasien') ?>" class="waves-effect waves-cyan"><i class="mdi-image-tag-faces"></i> Pasien</a>
-                </li>
-                <li class="bold"><a href="<?= base_url('dashboard/galeri') ?>" class="waves-effect waves-cyan"><i class="mdi-action-perm-media"></i> Galeri</a>
+                <li class="bold"><a href="<?= base_url('dashboard/client') ?>" class="waves-effect waves-cyan"><i class="mdi-image-tag-faces"></i> Client</a>
                 </li>
                 <li class="bold"><a href="<?= base_url('/logout') ?>" onclick="return confirm('Apakah anda yakin logout?')" class="waves-effect waves-red"><i class="mdi-action-exit-to-app"></i> Logout</a>
                 </li>
