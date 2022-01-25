@@ -31,7 +31,12 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+// Front Page Routes
 $routes->get('/', 'FrontPageController::homepage');
+$routes->get('/portfolio/(:segment)', 'FrontPageController::portfolio_detail/$1');
+
+// Auth Routes
 $routes->get('/login', 'LoginController::index');
 $routes->post('/login/auth', 'LoginController::auth');
 $routes->get('/logout', 'LoginController::logout');

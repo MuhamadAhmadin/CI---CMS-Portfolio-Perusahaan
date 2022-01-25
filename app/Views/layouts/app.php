@@ -2,7 +2,3 @@
 <?= $this->renderSection('content'); ?>
 <?= $this->include('layouts/footer.php'); ?>
 <?= $this->renderSection('js'); ?>
-
-            
-
-            

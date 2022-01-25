@@ -19,6 +19,14 @@ class FrontPageController extends BaseController
     Tanggal : 24 Januari 2022
     */
 
+    private Portfolio $portfolio;
+
+    public function __construct()
+    {
+        $this->portfolio = new Portfolio();
+        $this->portfolio->asObject();
+    }
+
     public function homepage()
     {
         $client = new Client();
@@ -29,5 +37,15 @@ class FrontPageController extends BaseController
         $data['portfolios'] = $portfolio->asObject()->findAll();
 
         return view('front/homepage', $data);
+    }
+
+    public function portfolio_detail($slug)
+    {
+        $model = $this->portfolio;
+        $data['data'] = $model->where('slug', $slug)->first();
+        $data['title'] = 'Detail Portfolio';
+
+        return view('front/portfolio_detail', $data);
+
     }
 }
