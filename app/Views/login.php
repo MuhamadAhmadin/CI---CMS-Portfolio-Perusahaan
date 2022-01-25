@@ -83,11 +83,11 @@
             <table class="table-info-demo">
               <tr>
                 <td>username</td>
-                <td>ahmadinations@gmail.com</td>
+                <td>admin</td>
               </tr>
               <tr>
                 <td>password</td>
-                <td>ahmadin</td>
+                <td>123</td>
               </tr>
             </table>
           </div>
