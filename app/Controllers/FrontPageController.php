@@ -35,6 +35,7 @@ class FrontPageController extends BaseController
 
         $data['clients'] = $client->asObject()->findAll();
         $data['portfolios'] = $portfolio->asObject()->findAll();
+        $data['tims'] = $tim->asObject()->findAll();
 
         return view('front/homepage', $data);
     }

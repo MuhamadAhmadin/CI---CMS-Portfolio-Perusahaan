@@ -58,8 +58,7 @@
                                 <?php foreach($tim as $item): ?>
                                 <tr>
                                     <td>
-                                    <img
-                                                src="<?= base_url('').'/../'.'writable/uploads/' . $item->photo?>" style="width: 80px;padding:4px"/>
+                                    <img src="<?= base_url('').'/../'.'writable/uploads/' . $item->photo?>" style="width: 80px;padding:4px"/>
                                     </td>
                                     <td><?= $item->nama ?></td>
                                     <td><?= $item->jabatan ?></td>

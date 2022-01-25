@@ -191,78 +191,25 @@
       </div>
 
       <div class="row">
-
+        <?php foreach($tims as $tim): ?>
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
           <div class="member">
             <div class="member-img">
-              <img src="<?= base_url('') ?>/front_assets/img/team/yono_maulana.png" class="img-fluid" alt="">
+              <img src="<?= base_url('').'/../'.'writable/uploads/' . $tim->photo; ?>" class="img-fluid" alt="">
               <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href="<?= $tim->twitter ?>"><i class="bi bi-twitter"></i></a>
+                <a href="<?= $tim->facebook ?>"><i class="bi bi-facebook"></i></a>
+                <a href="<?= $tim->instagram ?>"><i class="bi bi-instagram"></i></a>
+                <a href="<?= $tim->linkedin ?>"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
             <div class="member-info">
-              <h4>Yono Maulana</h4>
-              <span>CEO & Founder</span>
+              <h4><?= $tim->nama ?></h4>
+              <span><?= $tim->jabatan ?></span>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-          <div class="member">
-            <div class="member-img">
-              <img src="<?= base_url('') ?>/front_assets/img/team/muhamad_ahmadin.png" class="img-fluid" alt="">
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info">
-              <h4>Muhamad Ahmadin</h4>
-              <span>Web Developer</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-          <div class="member">
-            <div class="member-img">
-              <img src="<?= base_url('') ?>/front_assets/img/team/aghits.png" class="img-fluid" alt="">
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info">
-              <h4>Aghits Nidallah</h4>
-              <span>Web Developer</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-          <div class="member">
-            <div class="member-img">
-              <img src="<?= base_url('') ?>/front_assets/img/team/darsono.png" class="img-fluid" alt="">
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-            <div class="member-info">
-              <h4>Darsono</h4>
-              <span>Web Developer</span>
-            </div>
-          </div>
-        </div>
+        <?php endforeach; ?>
 
       </div>
 
