@@ -253,7 +253,8 @@
 
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
         <div class="col-xl-9 col-lg-12 mt-4">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <form action="<?= base_url('contact_form/store') ?>" method="post" role="form" class="php-email-form">
+            <?= $this->include('front/components/validation_checker'); ?>
             <div class="row">
               <div class="col-md-6 form-group">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Nama" required>

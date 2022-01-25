@@ -35,6 +35,7 @@ $routes->setAutoRoute(true);
 // Front Page Routes
 $routes->get('/', 'FrontPageController::homepage');
 $routes->get('/portfolio/(:segment)', 'FrontPageController::portfolio_detail/$1');
+$routes->add('contact_form/store', 'ContactFormController::store');
 
 // Auth Routes
 $routes->get('/login', 'LoginController::index');
@@ -43,18 +44,10 @@ $routes->get('/logout', 'LoginController::logout');
 $routes->get('/register', 'RegisterController::index');
 $routes->post('/register/save', 'RegisterController::save');
 
+
 $routes->group('dashboard', ['filter' => 'auth'], function($routes){
 	// Dashboard
 	$routes->get('/', 'PageController::index');
-
-    // Route kamar
-	$routes->get('kamar', 'KamarController::index');
-	$routes->get('kamar/(:segment)/preview', 'KamarController::preview/$1');
-    $routes->add('kamar/new', 'KamarController::new');
-    $routes->add('kamar/store', 'KamarController::store');
-	$routes->add('kamar/(:segment)/edit', 'KamarController::edit/$1');
-	$routes->add('kamar/(:segment)/update', 'KamarController::update/$1');
-	$routes->get('kamar/(:segment)/delete', 'KamarController::delete/$1');
     
     // Route Tim
 	$routes->get('tim', 'TimController::index');
@@ -82,6 +75,10 @@ $routes->group('dashboard', ['filter' => 'auth'], function($routes){
 	$routes->add('client/(:segment)/edit', 'ClientController::edit/$1');
 	$routes->add('client/(:segment)/update', 'ClientController::update/$1');
 	$routes->get('client/(:segment)/delete', 'ClientController::delete/$1');
+	
+	// Route Contact Form
+	$routes->get('contact_form', 'ContactFormController::index');
+	$routes->get('contact_form/(:segment)/delete', 'ContactFormController::delete/$1');
     
 	// Route user
 	$routes->get('user', 'UserController::index');
