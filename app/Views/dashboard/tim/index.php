@@ -22,7 +22,7 @@
                 </div>
                 <div class="col s2 m2 l2">
                     <div class="right">
-                        <a href="<?= base_url('dashboard/dokter/new') ?>"
+                        <a href="<?= base_url('dashboard/tim/new') ?>"
                             class="btn-floating btn-large waves-effect waves-light " style="margin-top: 15px;"><i
                                 class="mdi-content-add"></i></a>
                     </div>
@@ -44,24 +44,33 @@
                         <table id="data-table-simple" class="responsive-table display" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Kode Dokter</th>
+                                    <th>Photo</th>
                                     <th>Nama</th>
-                                    <th>Jenis Kelamin</th>
-                                    <th>Alamat</th>
+                                    <th>Jabatan</th>
+                                    <th>Twitter</th>
+                                    <th>Instagram</th>
+                                    <th>Facebook</th>
+                                    <th>LinkedIn</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach($dokter as $item): ?>
+                                <?php foreach($tim as $item): ?>
                                 <tr>
-                                    <td><?= $item->kode_dokter ?></td>
-                                    <td><?= $item->nama ?></td>
-                                    <td><?= ($item->gender == 'L') ? 'Laki-laki' : 'Perempuan'; ?></td>
-                                    <td><?= $item->alamat ?></td>
                                     <td>
-                                        <a href="<?= base_url('dashboard/dokter/'.$item->id.'/edit') ?>" class="btn btn-sm waves-effect waves-light yellow">Edit</a>
+                                    <img
+                                                src="<?= base_url('').'/../'.'writable/uploads/' . $item->photo?>" style="width: 80px;padding:4px"/>
+                                    </td>
+                                    <td><?= $item->nama ?></td>
+                                    <td><?= $item->jabatan ?></td>
+                                    <td><a href="<?= $item->twitter ?>">Link</a></td>
+                                    <td><a href="<?= $item->instagram ?>">Link</a></td>
+                                    <td><a href="<?= $item->facebook ?>">Link</a></td>
+                                    <td><a href="<?= $item->linkedin ?>">Link</a></td>
+                                    <td>
+                                        <a href="<?= base_url('dashboard/tim/'.$item->id.'/edit') ?>" class="btn btn-sm waves-effect waves-light yellow">Edit</a>
                                         <a href="#"
-                                                    data-href="<?= base_url('dashboard/dokter/'.$item->id.'/delete') ?>"
+                                                    data-href="<?= base_url('dashboard/tim/'.$item->id.'/delete') ?>"
                                                     onclick="confirmToDelete(this)" class="btn btn-sm waves-effect waves-light red">Hapus</a>
                                     </td>
                                 </tr>

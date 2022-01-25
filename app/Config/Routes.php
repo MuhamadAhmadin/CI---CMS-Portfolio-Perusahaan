@@ -56,14 +56,14 @@ $routes->group('dashboard', ['filter' => 'auth'], function($routes){
 	$routes->add('kamar/(:segment)/update', 'KamarController::update/$1');
 	$routes->get('kamar/(:segment)/delete', 'KamarController::delete/$1');
     
-    // Route dokter
-	$routes->get('dokter', 'DokterController::index');
-	$routes->get('dokter/(:segment)/preview', 'DokterController::preview/$1');
-    $routes->add('dokter/new', 'DokterController::new');
-    $routes->add('dokter/store', 'DokterController::store');
-	$routes->add('dokter/(:segment)/edit', 'DokterController::edit/$1');
-	$routes->add('dokter/(:segment)/update', 'DokterController::update/$1');
-	$routes->get('dokter/(:segment)/delete', 'DokterController::delete/$1');
+    // Route Tim
+	$routes->get('tim', 'TimController::index');
+	$routes->get('tim/(:segment)/preview', 'TimController::preview/$1');
+    $routes->add('tim/new', 'TimController::new');
+    $routes->add('tim/store', 'TimController::store');
+	$routes->add('tim/(:segment)/edit', 'TimController::edit/$1');
+	$routes->add('tim/(:segment)/update', 'TimController::update/$1');
+	$routes->get('tim/(:segment)/delete', 'TimController::delete/$1');
     
     // Route portfolio
 	$routes->get('portfolio', 'PortfolioController::index');

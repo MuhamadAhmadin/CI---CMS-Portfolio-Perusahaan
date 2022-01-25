@@ -67,7 +67,6 @@ class TimController extends BaseController
 
     public function update($id)
     {
-        $path = $this->request->getFile('file')->store();
         $data = [
             'nama' => $this->request->getPost('nama'),
             'jabatan' => $this->request->getPost('jabatan'),
@@ -75,8 +74,19 @@ class TimController extends BaseController
             'facebook' => $this->request->getPost('facebook'),
             'instagram' => $this->request->getPost('instagram'),
             'linkedin' => $this->request->getPost('linkedin'),
-            'photo' => $path,
         ];
+
+        if (!empty($_FILES['photo']['name'])) {
+            $path = $this->request->getFile('photo')->store();
+            $data['photo'] = $path;
+
+            try {
+                $oldFile = base_url("uploads/" . $this->request->photo_path);
+                unlink($oldFile);
+            } catch (Exception $e) {
+                return $e->getMessage();
+            }
+        }
 
         if (!$this->tim->validate($data)) {
             return redirect()->to('/dashboard/tim/'. $id .'/edit')->withInput()->with('errors', $this->tim->errors());

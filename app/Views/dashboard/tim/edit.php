@@ -22,7 +22,7 @@
                 </div>
                 <div class="col s2 m2 l2">
                     <div class="right submit-button">
-                        <a href="<?= base_url('dashboard/dokter') ?>" class="btn waves-effect waves-light "
+                        <a href="<?= base_url('dashboard/tim') ?>" class="btn waves-effect waves-light "
                             style="margin-top: 15px;">Kembali <i class="mdi-content-reply left"></i></a>
                     </div>
                 </div>
@@ -40,31 +40,44 @@
                 <div class="row">
 
                     <div class="col s12 m12 l12">
-                        <form class="col s12" action="<?= base_url('dashboard/dokter/'. $data->id .'/update') ?>" method="post">
+                        <form class="col s12" action="<?= base_url('dashboard/tim/'. $data->id .'/update') ?>" method="post" enctype="multipart/form-data">
                             <?= $this->include('components/validation_checker'); ?>
                             <div class="row">
-                                <div class="input-field col s6 m4">
-                                    <input id="kode_dokter" name="kode_dokter" value="<?= $data->kode_dokter ?>" type="text" class="validate">
-                                    <label for="kode_dokter">Kode Dokter</label>
+                            <div class="file-field input-field col s12 m12">
+                                <input type="hidden" name="photo_path" value="<?= $data->photo; ?>">
+                                <img src="<?= base_url('').'/../'.'writable/uploads/' . $data->photo?>" style="width: 80px;padding:4px"/>
+                                <br>
+                                <div class="btn">
+                                    <span>Pilih Foto</span>
+                                    <input type="file" name="photo">
                                 </div>
-                                <div class="input-field col s8 m">
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text">
+                                </div>
+                            </div>
+                            <div class="input-field col s6 m6">
                                     <input id="nama" name="nama" value="<?= $data->nama ?>" type="text" class="validate">
-                                    <label for="nama">Nama Lengkap Dokter</label>
+                                    <label for="nama">Nama Lengkap</label>
                                 </div>
-                                <div class="input-radio-buttons col s6 m3">
-                                    <label>Jenis Kelamin</label>
-                                    <p>
-                                    <input name="gender" value="L" type="radio" id="L" <?= $data->gender == 'L' ? 'checked' : '' ?> />
-                                    <label for="L">Laki-Laki</label>
-                                    </p>
-                                    <p>
-                                    <input name="gender" value="P" type="radio" id="P" <?= $data->gender == 'P' ? 'checked' : '' ?> />
-                                    <label for="P">Perempuan</label>
-                                    </p>
+                                <div class="input-field col s6 m6">
+                                    <input id="jabatan" name="jabatan" value="<?= $data->jabatan ?>" type="text" class="validate">
+                                    <label for="jabatan">Jabatan</label>
                                 </div>
-                                <div class="input-field col s9 m9">
-                                    <label>Alamat</label>
-                                    <textarea id="alamat" name="alamat" class="materialize-textarea"><?= $data->alamat ?></textarea>
+                                <div class="input-field col s3 m3">
+                                    <input id="twitter" name="twitter" value="<?= $data->twitter ?>" type="text" class="validate">
+                                    <label for="twitter">Link Twitter</label>
+                                </div>
+                                <div class="input-field col s3 m3">
+                                    <input id="facebook" name="facebook" value="<?= $data->facebook ?>" type="text" class="validate">
+                                    <label for="facebook">Link Facebook</label>
+                                </div>
+                                <div class="input-field col s3 m3">
+                                    <input id="instagram" name="instagram" value="<?= $data->instagram ?>" type="text" class="validate">
+                                    <label for="instagram">Link Instagram</label>
+                                </div>
+                                <div class="input-field col s3 m3">
+                                    <input id="linkedin" name="linkedin" value="<?= $data->linkedin ?>" type="text" class="validate">
+                                    <label for="linkedin">Link LinkedIn</label>
                                 </div>
                             </div>
                             <button class="btn waves-effect waves-light " type="submit" name="action">Simpan

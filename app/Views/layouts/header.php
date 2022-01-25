@@ -114,6 +114,8 @@
                 </li>
                 <li class="bold"><a href="<?= base_url('dashboard/client') ?>" class="waves-effect waves-cyan"><i class="mdi-image-tag-faces"></i> Client</a>
                 </li>
+                <li class="bold"><a href="<?= base_url('dashboard/tim') ?>" class="waves-effect waves-cyan"><i class="mdi-social-people"></i> Tim</a>
+                </li>
                 <li class="bold"><a href="<?= base_url('/logout') ?>" onclick="return confirm('Apakah anda yakin logout?')" class="waves-effect waves-red"><i class="mdi-action-exit-to-app"></i> Logout</a>
                 </li>
             </ul>
