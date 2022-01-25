@@ -20,6 +20,11 @@ class Portfolio extends Migration
 				'constraint'     => '255',
                 'null'           => true,
 			],
+			'slug'       => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
+                'null'           => true,
+			],
 			'category'       => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '129',

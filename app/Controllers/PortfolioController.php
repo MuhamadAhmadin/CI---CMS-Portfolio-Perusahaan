@@ -15,6 +15,8 @@ class PortfolioController extends BaseController
     {
         $this->portfolio = new Portfolio();
         $this->portfolio->asObject();
+
+        
     }
 
     public function index()
@@ -40,6 +42,7 @@ class PortfolioController extends BaseController
             'category' => $this->request->getPost('category'),
             'project_date' => $this->request->getPost('project_date'),
             'thumbnail' => $path,
+            'slug' => slug($this->request->getPost('app_name'))
         ];
 
         if (!$this->portfolio->validate($data)) {
