@@ -110,7 +110,7 @@
             </li>
                 <li class="bold"><a href="<?= base_url('dashboard') ?>" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a>
                 </li>
-                <li class="bold"><a href="<?= base_url('dashboard/pasien') ?>" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Pasien</a>
+                <li class="bold"><a href="<?= base_url('dashboard/portfolio') ?>" class="waves-effect waves-cyan"><i class="mdi-av-web"></i> Portfolio</a>
                 </li>
                 <li class="bold"><a href="<?= base_url('dashboard/client') ?>" class="waves-effect waves-cyan"><i class="mdi-image-tag-faces"></i> Client</a>
                 </li>

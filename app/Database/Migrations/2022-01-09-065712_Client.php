@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Galeri extends Migration
+class Client extends Migration
 {
     public function up()
     {
@@ -31,11 +31,11 @@ class Galeri extends Migration
 		// set Primary Key
 		$this->forge->addKey('id', TRUE);
 
-		$this->forge->createTable('galeri', TRUE);
+		$this->forge->createTable('client', TRUE);
     }
 
     public function down()
     {
-        $this->forge->dropTable('galeri');
+        $this->forge->dropTable('client');
     }
 }

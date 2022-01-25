@@ -22,7 +22,7 @@
                 </div>
                 <div class="col s2 m2 l2">
                     <div class="right submit-button">
-                        <a href="<?= base_url('dashboard/galeri') ?>" class="btn waves-effect waves-light "
+                        <a href="<?= base_url('dashboard/portfolio') ?>" class="btn waves-effect waves-light "
                             style="margin-top: 15px;">Kembali <i class="mdi-content-reply left"></i></a>
                     </div>
                 </div>
@@ -40,21 +40,44 @@
                 <div class="row">
 
                     <div class="col s12 m12 l12">
-                        <form class="col s12" action="<?= base_url('dashboard/galeri/store') ?>" method="post"
-                            enctype="multipart/form-data">
+                        <form class="col s12" action="<?= base_url('dashboard/portfolio/store') ?>" method="post" enctype="multipart/form-data">
                             <?= $this->include('components/validation_checker'); ?>
                             <div class="row">
-                                <div class="file-field input-field">
+                                <div class="input-field col s6 m4">
+                                    <input id="app_name" name="app_name" type="text" class="validate">
+                                    <label for="app_name">Nama Portfolio/Proyek</label>
+                                </div>
+                                <div class="input-field col s4 m4">
+                                    <input id="client_name" name="client_name" type="text" class="validate">
+                                    <label for="client_name">Klien</label>
+                                </div>
+                                <div class="input-select col s4 m4">
+                                    <label>Kategori Portfolio</label>
+                                    <select name="category" id="category" class="validate">
+                                        <option value="web">Website</option>
+                                        <option value="app">App</option>
+                                    </select>
+                                </div>
+                                <div class="input-field col s12 m12">
+                                    <label>Deskripsi Portfolio/Proyek</label>
+                                    <textarea id="description" name="description" class="materialize-textarea"></textarea>
+                                </div>
+
+                                <div class="input-date col s4 m4">
+                                    <label for="project_date">Tanggal Proyek</label>
+                                    <input id="project_date" name="project_date" type="date" value="<?= date('Y-m-d') ?>" class="validate">
+                                </div>
+                                <div class="file-field input-field col s4 m4">
                                     <div class="btn">
                                         <span>Pilih Gambar</span>
-                                        <input type="file" name="file" required>
+                                        <input type="file" name="thumbnail" required>
                                     </div>
                                     <div class="file-path-wrapper">
                                         <input class="file-path validate" type="text">
                                     </div>
                                 </div>
                             </div>
-                            <button class="btn btn-sm waves-effect waves-light " type="submit" name="action">Upload
+                            <button class="btn waves-effect waves-light " type="submit" name="action">Simpan
                                 <i class="mdi-content-send right"></i>
                             </button>
                         </form>

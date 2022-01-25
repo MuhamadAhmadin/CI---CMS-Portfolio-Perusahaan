@@ -44,7 +44,7 @@
                         <table id="data-table-simple" class="responsive-table display" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Thumbnail</th>
+                                    <th>Logo Client</th>
                                     <th>Nama File</th>
                                     <th>Aksi</th>
                                 </tr>

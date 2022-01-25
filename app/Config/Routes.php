@@ -60,23 +60,23 @@ $routes->group('dashboard', ['filter' => 'auth'], function($routes){
 	$routes->add('dokter/(:segment)/update', 'DokterController::update/$1');
 	$routes->get('dokter/(:segment)/delete', 'DokterController::delete/$1');
     
-    // Route pasien
-	$routes->get('pasien', 'PasienController::index');
-	$routes->get('pasien/(:segment)/preview', 'PasienController::preview/$1');
-    $routes->add('pasien/new', 'PasienController::new');
-    $routes->add('pasien/store', 'PasienController::store');
-	$routes->add('pasien/(:segment)/edit', 'PasienController::edit/$1');
-	$routes->add('pasien/(:segment)/update', 'PasienController::update/$1');
-	$routes->get('pasien/(:segment)/delete', 'PasienController::delete/$1');
+    // Route portfolio
+	$routes->get('portfolio', 'PortfolioController::index');
+	$routes->get('portfolio/(:segment)/preview', 'PortfolioController::preview/$1');
+    $routes->add('portfolio/new', 'PortfolioController::new');
+    $routes->add('portfolio/store', 'PortfolioController::store');
+	$routes->add('portfolio/(:segment)/edit', 'PortfolioController::edit/$1');
+	$routes->add('portfolio/(:segment)/update', 'PortfolioController::update/$1');
+	$routes->get('portfolio/(:segment)/delete', 'PortfolioController::delete/$1');
     
-	// Route Galeri
-	$routes->get('galeri', 'GaleriController::index');
-	$routes->get('galeri/(:segment)/preview', 'GaleriController::preview/$1');
-    $routes->add('galeri/new', 'GaleriController::new');
-    $routes->add('galeri/store', 'GaleriController::store');
-	$routes->add('galeri/(:segment)/edit', 'GaleriController::edit/$1');
-	$routes->add('galeri/(:segment)/update', 'GaleriController::update/$1');
-	$routes->get('galeri/(:segment)/delete', 'GaleriController::delete/$1');
+	// Route Client
+	$routes->get('client', 'ClientController::index');
+	$routes->get('client/(:segment)/preview', 'ClientController::preview/$1');
+    $routes->add('client/new', 'ClientController::new');
+    $routes->add('client/store', 'ClientController::store');
+	$routes->add('client/(:segment)/edit', 'ClientController::edit/$1');
+	$routes->add('client/(:segment)/update', 'ClientController::update/$1');
+	$routes->get('client/(:segment)/delete', 'ClientController::delete/$1');
     
 	// Route user
 	$routes->get('user', 'UserController::index');

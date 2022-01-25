@@ -22,7 +22,7 @@
                 </div>
                 <div class="col s2 m2 l2">
                     <div class="right">
-                        <a href="<?= base_url('dashboard/pasien/new') ?>"
+                        <a href="<?= base_url('dashboard/portfolio/new') ?>"
                             class="btn-floating btn-large waves-effect waves-light " style="margin-top: 15px;"><i
                                 class="mdi-content-add"></i></a>
                     </div>
@@ -46,36 +46,29 @@
                             <table id="data-table-simple" class="responsive-table display" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>No. Pasien</th>
-                                        <th>NIK</th>
-                                        <th>Nama</th>
-                                        <th>Jenis Kelamin</th>
-                                        <th>Alamat</th>
-                                        <th>Telepon</th>
-                                        <th>Keluhan</th>
-                                        <th>Tgl Datang/Berobat</th>
-                                        <th>Harga Jasa</th>
-                                        <th>Dokter Yang Menangani</th>
+                                        <th>Thumbnail</th>
+                                        <th>Portfolio/Proyek</th>
+                                        <th>Kategori</th>
+                                        <th>Klien</th>
+                                        <th>Tanggal Proyek</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach($pasien as $item): ?>
+                                    <?php foreach($portfolio as $item): ?>
                                     <tr>
-                                        <td><?= $item->no_pasien ?></td>
-                                        <td><?= $item->nik ?></td>
-                                        <td><?= $item->nama ?></td>
-                                        <td><?= ($item->gender == 'L') ? 'Laki-laki' : 'Perempuan'; ?></td>
-                                        <td><?= $item->alamat ?></td>
-                                        <td><?= $item->telepon ?></td>
-                                        <td><?= $item->keluhan ?></td>
-                                        <td><?= $item->tanggal_datang ?></td>
-                                        <td>Rp <?= number_format($item->harga_jasa, 0, ",", ".") ?> ,-</td>
-                                        <td><?= $item->nama_dokter ?></td>
                                         <td>
-                                            <a href="<?= base_url('dashboard/pasien/'.$item->id.'/edit') ?>" class="btn btn-sm waves-effect waves-light yellow">Edit</a>
+                                            <img
+                                                src="<?= base_url('').'/../'.'writable/uploads/' . $item->thumbnail?>" style="width: 80px;padding:4px"/>
+                                        </td>
+                                        <td><?= $item->app_name ?></td>
+                                        <td><?= $item->category ?></td>
+                                        <td><?= $item->client_name ?></td>
+                                        <td><?= $item->project_date ?></td>
+                                        <td>
+                                            <a href="<?= base_url('dashboard/portfolio/'.$item->id.'/edit') ?>" class="btn btn-sm waves-effect waves-light yellow">Edit</a>
                                             <a href="#"
-                                                        data-href="<?= base_url('dashboard/pasien/'.$item->id.'/delete') ?>"
+                                                        data-href="<?= base_url('dashboard/portfolio/'.$item->id.'/delete') ?>"
                                                         onclick="confirmToDelete(this)" class="btn btn-sm waves-effect waves-light red">Hapus</a>
                                         </td>
                                     </tr>

@@ -18,32 +18,16 @@
                 <div class="col s12 m6 l3">
                     <div class="card">
                         <div class="card-content  green white-text">
-                            <p class="card-stats-title"><i class="mdi-social-group-add"></i> Total Pasien</p>
-                            <h4 class="card-stats-number"><?= $jumlah_pasien ?></h4>
+                            <p class="card-stats-title"><i class="mdi-social-group-add"></i> Total Tim</p>
+                            <h4 class="card-stats-number"><?= $jumlah_tim ?></h4>
                         </div>
                     </div>
                 </div>
                 <div class="col s12 m6 l3">
                     <div class="card">
                         <div class="card-content pink lighten-1 white-text">
-                            <p class="card-stats-title"><i class="mdi-editor-insert-drive-file"></i> Jumlah Dokter</p>
-                            <h4 class="card-stats-number"><?= $jumlah_dokter ?></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m6 l3">
-                    <div class="card">
-                        <div class="card-content blue-grey white-text">
-                            <p class="card-stats-title"><i class="mdi-action-trending-up"></i> Jumlah Kamar</p>
-                            <h4 class="card-stats-number"><?= $jumlah_kamar ?></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m6 l3">
-                    <div class="card">
-                        <div class="card-content purple white-text">
-                            <p class="card-stats-title"><i class="mdi-editor-attach-money"></i>Total Pendapatan</p>
-                            <h4 class="card-stats-number">Rp <?= number_format($total_pendapatan, 0, ",", "."); ?></h4>
+                            <p class="card-stats-title"><i class="mdi-editor-insert-drive-file"></i> Total Portolio</p>
+                            <h4 class="card-stats-number"><?= $jumlah_portfolio ?></h4>
                         </div>
                     </div>
                 </div>

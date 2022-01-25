@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Dokter extends Migration
+class Portfolio extends Migration
 {
     public function up()
     {
@@ -15,38 +15,45 @@ class Dokter extends Migration
 				'unsigned'       => true,
 				'auto_increment' => true
 			],
-			'kode_dokter'       => [
+			'app_name'       => [
 				'type'           => 'VARCHAR',
-				'constraint'     => '25',
+				'constraint'     => '255',
                 'null'           => true,
 			],
-			'nama'      => [
-                'type'           => 'VARCHAR',
-                'constraint'     => '129',
+			'category'       => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '129',
                 'null'           => true,
 			],
-			'gender'      => [
-                'type'           => 'CHAR',
-                'constraint'     => '1',
+			'client_name'       => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
                 'null'           => true,
-                'default'       => 'L'
 			],
-			'alamat'      => [
+            'description'      => [
+                'type'           => 'TEXT',
+                'null'           => true,
+            ],
+            'project_date' => [
+                'type'           => 'DATE',
+                'null'           => true,
+            ],
+            'thumbnail' => [
                 'type'           => 'VARCHAR',
                 'constraint'     => '255',
                 'null'           => true,
-			],
+            ],
             'created_at DATETIME DEFAULT CURRENT_TIMESTAMP'
 		]);
 
 		// set Primary Key
 		$this->forge->addKey('id', TRUE);
 
-		$this->forge->createTable('dokter', TRUE);
+		$this->forge->createTable('portfolio', TRUE);
     }
 
     public function down()
     {
-        $this->forge->dropTable('dokter');
+        $this->forge->dropTable('portfolio');
     }
 }
