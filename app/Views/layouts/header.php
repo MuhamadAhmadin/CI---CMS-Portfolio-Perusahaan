@@ -22,17 +22,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Aplikasi ini dibuat oleh Muhamad Ahmadin 190511024 K1 Semester 5">
-    <meta name="keywords" content="UTS Pemrograman WEB CI4">
-    <title>UTS WEB K1|Muhamad Ahmadin 190511024</title>
+    <meta name="keywords" content="Tugas Project CI 4">
+    <title>Dashboard CMS Web</title>
 
     <!-- Favicons-->
-    <link rel="icon" href="<?= base_url('') ?>/images/favicon/favicon-32x32.png" sizes="32x32">
-    <!-- Favicons-->
-    <link rel="apple-touch-icon-precomposed" href="<?= base_url('') ?>/images/favicon/apple-touch-icon-152x152.png">
-    <!-- For iPhone -->
-    <meta name="msapplication-TileColor" content="#00bcd4">
-    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
-    <!-- For Windows Phone -->
+    <link rel="icon" href="<?= base_url('') ?>/images/favicon/favicon.png" sizes="32x32">
 
 
     <!-- CORE CSS-->    

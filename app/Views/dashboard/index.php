@@ -31,6 +31,22 @@
                         </div>
                     </div>
                 </div>
+                <div class="col s12 m6 l3">
+                    <div class="card">
+                        <div class="card-content blue lighten-1 white-text">
+                            <p class="card-stats-title"><i class="mdi-editor-insert-drive-file"></i> Total Client</p>
+                            <h4 class="card-stats-number"><?= $jumlah_client ?></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card">
+                        <div class="card-content orange lighten-1 white-text">
+                            <p class="card-stats-title"><i class="mdi-editor-insert-drive-file"></i> Total Pesan Masuk</p>
+                            <h4 class="card-stats-number"><?= $jumlah_contact_form ?></h4>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!--card stats end-->

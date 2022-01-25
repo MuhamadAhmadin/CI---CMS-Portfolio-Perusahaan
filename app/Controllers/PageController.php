@@ -9,6 +9,7 @@ use App\Models\Freelancer;
 use App\Models\Event;
 use App\Models\Skill;
 use App\Models\Company;
+use App\Models\ContactForm;
 use App\Models\Dokter;
 use App\Models\Kamar;
 use App\Models\Loker;
@@ -31,10 +32,12 @@ class PageController extends BaseController
         $portfolio = new Portfolio();
         $client = new Client();
         $tim = new Tim();
+        $contact_form = new ContactForm();
         $data['jumlah_user'] = $user->countAll();
         $data['jumlah_portfolio'] = $portfolio->countAll();
         $data['jumlah_client'] = $client->countAll();
         $data['jumlah_tim'] = $tim->countAll();
+        $data['jumlah_contact_form'] = $contact_form->countAll();
         return view('dashboard/index', $data);
     }
 }
